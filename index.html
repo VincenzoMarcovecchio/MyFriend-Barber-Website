@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Lelo Acconciatore</title>
+		<meta name="description" content="Parruchiere Uomo Castiglione Messere Marino" />
+		<meta name="keywords" content="parruchiere uomo castiglione messer marino" />
+		<meta name="author" content="Lelo Acconciatore" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Arapey|Montserrat:700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/mirror.css" />
+		<script>document.documentElement.className = 'js';</script>
+	</head>
+	<body class="demo-1 loading">
+
+		<main>
+			<section class="content content--full">
+
+				<h2 class="page-title">Lelo Acconciature</h2>
+				<div class="slideshow">
+					<div class="slide">
+						<div class="mirror" data-visible-area="0.85">
+							<div class="mirror__side mirror__side--one">
+								<img class="mirror__img" src="img/1.jpg" alt="Some image" />
+							</div>
+							<div class="mirror__side mirror__side--two">
+								<img class="mirror__img" src="img/1.jpg" alt="Some image" />
+							</div>
+						</div>
+						<h2 class="slide__title" ><span style="color:#e40017;font-style:bolder;   text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;">X</span>&nbsp;iMAGE</h2>
+					</div>
+					<div class="slide">
+						<div class="mirror" data-visible-area="0.8">
+							<div class="mirror__side mirror__side--one">
+								<img class="mirror__img" src="img/2.jpg" alt="Some image" />
+							</div>
+							<div class="mirror__side mirror__side--two">
+								<img class="mirror__img" src="img/2.jpg" alt="Some image" />
+							</div>
+						</div>
+						<h2 class="slide__title"><a href="https://www.facebook.com/profile.php?id=100008983266768" rel="canonical noopener" target="_blank"><i class="fab  fa-facebook"></i></a><i class="fab fa-whatsapp"></i><i class="fab fa-instagram"></i></h2>
+
+
+					</div>
+
+					<nav class="slideshow__nav">
+						<button class="btn btn--nav">Home</button>
+						<button class="btn btn--nav">Prenota</button>
+					</nav>
+				</div>
+				<a class="link link--sponsor" href="#">Via Roma, 60 <br/>Castiglione Messer Marino</a>
+			</section>
+		</main>
+		<script src="https://kit.fontawesome.com/3acb87dbd6.js" crossorigin="anonymous"></script>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/anime.min.js"></script>
+		<script src="js/mirrorFx.js"></script>
+		<script src="js/slideshow.js"></script>
+		<script>
+		(function() {
+
+			function init() {
+				new Slideshow(document.querySelector('.slideshow'));
+			}
+
+			// Fake loading time..
+			var startTime = new Date().getTime();
+			imagesLoaded(document.querySelector('main'), function() {
+				var elapsed = new Date().getTime() - startTime,
+					initFn = function() {
+						document.body.classList.remove('loading');
+						setTimeout(init, 50);
+					};
+
+				if( elapsed > 2000) {
+					initFn();
+				}
+				else {
+					setTimeout(initFn, 1000);
+				}
+			});
+
+		})();
+		</script>
+	</body>
+</html>
